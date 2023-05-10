@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main()
+ {
+    int num_people, is_company, age;
+	printf("Enter the number of people staying: ");
+    scanf("%d", &num_people);
+    printf("Is the stay for company business? (1 for yes, 0 for no): ");
+    scanf("%d", &is_company);
+    printf("Enter the age of the customer: ");
+    scanf("%d", &age);
+    int base_cost;
+    if (num_people == 2)
+	 {
+        base_cost = 85;
+    } 
+	else if (num_people == 3) 
+	{
+        base_cost = 90;
+    } 
+	else if (num_people == 4) 
+	{
+        base_cost = 95;
+    } 
+	else
+	 {
+        base_cost = 95 + 6 * (num_people - 4);
+    }
+    double discount = 0.0;
+    if (is_company == 1) 
+	{
+        discount = 0.2;
+    } 
+	else if (age >= 60)
+	 {
+        discount = 0.15;
+    }
+    double final_cost = base_cost * (1 - discount);
+    printf("Cost of room: $%.2f\n", final_cost);
+    return 0;
+}
