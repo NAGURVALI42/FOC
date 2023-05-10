@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+double cosine(double x, int n) 
+{
+    double sum = 1;
+    int sign = -1;
+    int i;
+    for (i = 2; i <= n; i += 2)
+	 {
+        sum += sign * pow(x, i) / tgamma(i + 1);
+        sign *= -1;
+    }
+
+    return sum;
+}
+int main()
+ {
+    double x, c;
+    int n;
+    printf("Enter the angle in radians: ");
+    scanf("%lf", &x);
+    printf("Enter the number of terms to use: ");
+    scanf("%d", &n);
+    c = cosine(x, n);
+    printf("cos(%.2lf) = %.6lf\n", x, c);
+    return 0;
+}
