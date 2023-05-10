@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+ {
+ int num, sum, checkdigit;
+ char cardNumber[6];
+ printf("Enter a four-digit number: ");
+ scanf("%d", &num);
+ sum = (num % 10) + ((num / 10) % 10) + ((num / 100) % 10) + ((num / 1000) % 10);
+ if (sum % 2 == 0)
+  {
+ checkdigit = 0;
+ } 
+ else
+  {
+ checkdigit = 1;
+ }
+    sprintf(cardNumber, "%d%d", num, checkdigit);
+    printf("Original Number: %d\n", num);
+    printf("New Number: %s\n", cardNumber);
+    return 0;
+}
