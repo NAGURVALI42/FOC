@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+ {
+    int i, n, sum = 0, sign = 1;
+    printf("enter the value of n: ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+	 {
+        sum += i * sign;
+        sign = -sign;   
+    }
+    printf("the sum of the series 1 - 2 + 3 - 4 + 5 ... %d is %d\n", n, sum);
+    return 0;
+}
