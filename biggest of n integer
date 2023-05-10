@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+ {
+   int n, i, max;
+   printf("Enter the number of integers: ");
+   scanf("%d", &n);
+   printf("Enter the integers: ");
+   scanf("%d", &max);
+   for (i = 1; i < n; i++)
+    {
+      int x;
+      scanf("%d", &x);
+      if (x > max)
+	   {
+         max = x;
+      }
+   }
+   printf("The biggest integer is: %d", max);
+   return 0;
+}
