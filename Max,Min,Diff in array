@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int a[50],n,i;
+	printf("Enter the n value:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("Elements %d=",i+1);
+		scanf("%d",&a[i]);
+	}
+	int max=a[0];
+	int min=a[0];
+	int diff;
+	for(i=0;i<n;i++)
+	{
+		if(a[i]>=max)
+		max=a[i];
+	if(a[i]<=min)
+	    min=a[i];
+	    diff=max-min;
+	}
+	printf("Max element:%d\n",max);
+	printf("Min element:%d\n",min);
+	printf("Difference:%d",diff);
+	}
