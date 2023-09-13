@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+	int m[10][10];
+	int r,c,j,i;
+	int sumrow;
+	printf("r=");
+	scanf("%d",&r);
+	printf("c=");
+	scanf("%d",&c);
+	printf("Enter the elements=");
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			scanf("%d",&m[i][j]);
+		}
+	}
+	for(i=0;i<r;i++)
+	{
+		int sumrow=0;
+		for(int j=0;j<c;j++)
+		{
+		sumrow=sumrow+m[i][j];
+	}
+	printf("\nSum of rows is:%d",sumrow);
+}
+	return 0;
+}
