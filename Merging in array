@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+	int a[20],b[20],c[50],i,n;
+	printf("Enter the n value:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("Elements a of %d=",i+1);
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		printf("Elements b of %d=",i+1);
+		scanf("%d",&b[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		c[i]=a[i];
+		c[i+n]=b[i];
+	}
+	printf("New array is %d:");
+	for(i=0;i<10;i++)
+	{
+		printf("%d",c[i]);
+	}
+	return 0;
+}
