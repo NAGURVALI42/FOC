@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	int a[50],n,i,sum=0,prod=1;
+	int *ptr;
+	printf("Enter the n value:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("Elemeny %d:",i+1);
+		scanf("%d",&a[i]);
+	}
+	ptr=a;
+	for(i=0;i<n;i++){
+		sum=sum+*ptr;
+		prod=prod*(*ptr);
+	}
+	printf("Sum of elements is:%d\n",sum);
+	printf("Product of Elements is :%d",prod);
+	return 0;
+}
