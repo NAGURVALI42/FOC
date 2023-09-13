@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int x,year;
+	printf("");
+	scanf("%d",&year);
+	if(year%4==0)
+	{
+		printf("It is a leap year");
+	}
+	else
+	{
+		printf("It is not a leap year");
+	}
+	x=year%4;
+	if(x!=0)
+	{
+		printf("\nPrevious leap year:%d",year-x);
+	}
+	else
+	{
+		printf("\nNext leap year:%d",year+x);
+	}
+	return 0;
+}
