@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	int i,n,a[50];
+	printf("Enter the n value:");
+	scanf("%d",&n);
+	for(i=0;i<=n;i++)
+	{
+		printf("Element %d:",i+1);
+		scanf("%d",&a[i]);
+	}
+	printf("Reverse elements are:");
+	for(i=n;i>=0;i--)
+	{
+		printf("%d ",a[i]);
+	}
+}
