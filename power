@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int base,ex;
+	int power;
+	printf("enter the base num=\n");
+	printf("enter the exp num=\n");
+	scanf("%d %d",&base,&ex);
+	power=pow(base,ex);
+	printf("%d",power);
+}
